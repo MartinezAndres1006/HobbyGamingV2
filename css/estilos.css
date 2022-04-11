@@ -1,0 +1,220 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.cuerpo{
+    background-color: #575757;
+}
+.container-fluid{
+    background-color: #000;
+}
+.navegacion li a{
+    color: #ffff;
+}
+.logo{
+    height: 80px;
+}
+
+.nav-link{
+    font-size: 20px;
+}
+.nav-link:hover{
+    color: #ffff;
+}
+
+.navbar{
+    padding:0px;
+
+}
+/* ------------------------------------------1vinculo---------------------------------------------------- */
+.portada{
+    background-image: url(https://i.pinimg.com/originals/d5/9f/ee/d59fee216c71f8bff4e7a819687ffa5a.jpg);
+    background-repeat: no-repeat;
+    height: 662px;
+}
+.boton {
+    appearance: none;
+    background-color: transparent;
+    border: 0.125em solid #1A1A1A;
+    border-radius: 0.9375em;
+    box-sizing: border-box;
+    color: #3B3B3B;
+    cursor: pointer;
+    display: inline-block;
+    font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+    font-size: 16px;
+    font-weight: 600;
+    line-height: normal;
+    margin: 30px;
+    min-height: 3.75em;
+    min-width: 0;
+    outline: none;
+    padding: 1em 2.3em;
+    text-align: center;
+    text-decoration: none;
+    transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    will-change: transform;
+    animation-duration: 2s;
+   }
+
+   .boton:disabled {
+    pointer-events: none;
+   }
+
+   .boton:hover {
+    color: #fff;
+    background-color: #1A1A1A;
+    box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+    transform: translateY(-2px);
+   }
+   .boton a:hover{
+       color:#fff
+   }
+   .boton:active {
+    box-shadow: none;
+    transform: translateY(0);
+   }
+   .boton a{
+       color: #000;
+       text-decoration: none;
+   }
+.titulo h1{
+    font-size: 3.5rem;
+    color: #ffff;
+    text-shadow: 0 0 8px #000;
+    animation-duration: 2s;
+}
+.titulo h2{
+    font-size: 3.5rem;
+    color: #ffff;
+    text-shadow: 0 0 8px #000;
+    animation-duration: 2s;
+}
+
+.subtitulo{
+    color: #ffff;
+    text-shadow: 0 0 8px #000;
+    padding: 0 20px;
+    font-size: 45px;
+}
+
+.subtitulo p{
+    font-size: 2rem;
+}
+.novedades img {
+padding: 20px 40px;
+width: 530px;
+height: 334px;
+}
+                                                /* <-----------2vinculo--------------> */
+
+.nosotros{
+background-image: url(https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/styles/1200/public/media/image/2021/08/setup-gaming-2444707.jpg?itok=2xpK7tTu);
+height: 662px;
+}
+
+
+.subtitulo2 h1{
+    color: #ffff;
+    text-shadow: 0 0 8px #000;
+    padding: 0 20px;
+    font-size: 55px;
+    /* position: relative;
+    top: 150px;
+    left: 300px; */
+
+}
+.subtitulo2 p{
+    color: #ffff;
+    text-shadow: 0 0 8px #000;
+    padding: 0 20px;
+    font-size: 40px;
+    /* position: relative;
+    top: 200px;
+    width: 50%;
+    left: 300px; */
+}
+
+/* <------------------3vinculo---------------------> */
+
+.juegos{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    justify-content: space-around;
+    text-align: center;
+    margin: 20px;
+   }
+
+   .articulo img{
+       width: 255px;
+       height: 315px;
+       margin: 10px;
+
+   }
+   .articulo{
+       background: #ffff;
+       margin: 10px;
+       border-radius: 6px;
+
+   }
+   
+   .container-fluid2{
+   background-color: #575757;
+   }
+   /* -------------------4vinculo------------------------------ */
+.img__ayuda{
+    width: 700px;
+    height: 400px;
+    margin: 10px;
+}
+/* ---------------------------------------5vinvulo--------------------------------------- */
+.caja{
+    background-color: #ff8836;
+    margin: 30px;
+    border-radius: 6px;
+    font-size: 20px;
+    position: relative;
+    left: 0%;
+    
+}
+.botoncito {
+    padding: 10px 30px;
+    border-radius: 50px;
+    border: 0;
+    background-color: white;
+    box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    font-size: 15px;
+    transition: all .5s ease;
+    position: relative;
+    left: 23%;
+    bottom: 4%;
+    margin: 5px 0;
+   }
+   
+   .botoncito:hover {
+    letter-spacing: 3px;
+    background-color: #ff8836;
+    color: hsl(0, 0%, 100%);
+    box-shadow: #000 0px 7px 29px 0px;
+   }
+   
+   .botoncito:active {
+    letter-spacing: 3px;
+    background-color: hsl(261deg 80% 48%);
+    color: hsl(0, 0%, 100%);
+    box-shadow: rgb(93 24 220) 0px 0px 0px 0px;
+    transform: translateY(10px);
+    transition: 100ms;
+   }
+.logo__footer{
+    width: 40px;
+    height: 40px;
+}
