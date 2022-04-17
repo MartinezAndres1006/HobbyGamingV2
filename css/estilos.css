@@ -102,6 +102,13 @@
 
 }
 
+.subtitulo3 {
+    color: #ffff;
+    text-shadow: 0 0 8px #000;
+    padding: 0 20px;
+    font-size: 40px;
+}
+
 /* <------------------3vinculo---------------------> */
 
 .articulo {
@@ -187,10 +194,17 @@
     }
 
     .subtitulo2 h1 {
-      font-size: 2rem;       
+        font-size: 2rem;
     }
-    
-    .subtitulo2 p{
- font-size: 1.3rem;
+
+    .subtitulo2 p {
+        font-size: 1.3rem;
+    }
+
+    .subtitulo3 {
+        color: #ffff;
+        text-shadow: 0 0 8px #000;
+        padding: 0 20px;
+        font-size: 35px;
     }
 }
