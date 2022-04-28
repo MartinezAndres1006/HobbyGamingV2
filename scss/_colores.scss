@@ -1,0 +1,77 @@
+@import"variables";
+@mixin fondo-color {
+    background-color: #383838;
+}
+@mixin letras{
+    color: #fff;
+    font-size: 22px;
+}
+.cabecera,
+.piesito {
+    color: $color-titulos;
+    background-color: #000;
+    padding: 0;
+}
+
+.cuerpo {
+    @include fondo-color()
+}
+
+.navegacion {
+    li {
+        a {
+            color: $color-titulos;
+        }
+    }
+}
+
+#navbar {
+    ul {
+        li {
+            a {
+                font-size: 20px;
+            }
+        }
+    }
+}
+
+.subtitulo {
+    color: map-get($estilos, colorsito);
+    text-shadow:0 0 8px #000;
+}
+
+.parrafo {
+    @extend .subtitulo;
+    text-shadow: 0 0 15px #000;
+}
+.lista__eleccion{
+    @include fondo-color();
+    @include letras();
+}
+
+// -------------------------------------------------------------------------------2do vinculo-----------------------------------------------------
+.container-fluid2 {
+    background-color: $fondo-pagina;
+}
+
+.caja {
+    background-color: #ff8836;
+}
+
+.botoncito {
+    background-color: white;
+    box-shadow: #000 0 0 8px;
+
+    &:hover {
+        background-color: #ff8836;
+        color: hsl(0, 0%, 100%);
+        box-shadow: #000 0px 7px 29px 0px;
+    }
+
+    &:active {
+        background-color: rgb(93, 24, 220);
+        color: hsl(0, 0%, 100%);
+        box-shadow: rgb(93, 24, 220) 0px 0px 0px 0px;
+    }
+
+}
