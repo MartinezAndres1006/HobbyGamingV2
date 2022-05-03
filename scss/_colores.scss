@@ -75,3 +75,12 @@
     }
 
 }
+@media screen and (max-width:768px) {
+    .cabecera,
+.piesito {
+    color: $color-titulos;
+    background-color: #ff8836;
+    padding: 0;
+}
+
+}

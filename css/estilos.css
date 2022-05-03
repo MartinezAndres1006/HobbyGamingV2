@@ -88,7 +88,15 @@
   .parrafo {
     font-size: 1rem; }
   .subtitulo, .parrafo {
-    font-size: 2rem; } }
+    font-size: 2rem; }
+  .titulo__pagina {
+    font-size: 35px;
+    padding: 5px; } }
+
+.videito {
+  width: 300px;
+  height: 300px;
+  margin: 10px; }
 
 .cabecera,
 .piesito {
@@ -134,3 +142,10 @@
     background-color: #5d18dc;
     color: white;
     box-shadow: #5d18dc 0px 0px 0px 0px; }
+
+@media screen and (max-width: 768px) {
+  .cabecera,
+  .piesito {
+    color: #fff;
+    background-color: #ff8836;
+    padding: 0; } }
