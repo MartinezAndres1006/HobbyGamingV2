@@ -5,7 +5,7 @@ let respuesta = prompt(usuario + " ¿Cuantos años tienes?")
 
 while (respuesta <= 18) {
 
-    answer = prompt("Ingresaste bien tu edad?")
+    let answer = prompt("Ingresaste bien tu edad?")
 
     if (answer =="si") {
         alert("No puedes ingresar")
