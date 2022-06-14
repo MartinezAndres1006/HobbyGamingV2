@@ -1,58 +1,56 @@
 let usuario = prompt('¿Podrias ingresar tu nombre?')
-alert("Hola" + " " + usuario)
-
-let respuesta = prompt(usuario + " ¿Cuantos años tienes?")
-
-while (respuesta < 18) {
-
-    let answer = prompt("Ingresaste bien tu edad?")
-
-    if (answer == "si") {
-        alert("No puedes ingresar")
-    } else {
-        respuesta = prompt('Ingresa tu edad')
-    }
+while (usuario == "") {
+    usuario = prompt("¿Podrias ingresar tu nombre?")
 }
-
 alert("Bienvenido" + " " + usuario)
 
-alert("Le haremos unas cuantas preguntas para calcular que titulos puede comprar")
+alert("A continuacion le vamos a mostrar la lista de juegos")
 
-
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+let listaPrecios = [{
+        precio: 2000
+    },
+    {
+        precio: 3500
+    },
+    {
+        precio: 5500
+    },
+    {
+        precio: 3500
+    }
+]
+const IVA = 21
+const sumaIva = (x) => x * 21 / 100
+const suma = (a, b) => a + b
 let AWayOut = 2000
 let asassinsCreedUnity = 3500
 let asassinCreedValhalla = 5500
 let battlefield5 = 3500
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-const suma = (a, b) => {
-    return a + b
+
+function solicitarSaldo() {
+    let saldo = prompt("Ingrese su saldo disponible")
+    return parseInt(saldo)
 }
 
-function solicitarPrecio() {
-    let numero = prompt("Ingresa un monto")
-    return parseInt(numero)
+function solicitarJuego() {
+    let titulo = prompt("Seleccione el juego que prefiera:\n1-AWayOut:$2000\n2-AsassinsCreedUnity:$3500\n3-AsassinCreedValhalla:5500\n4-Battlefield5:$3500")
+    return parseInt(titulo)
 }
 
-let pregunta = prompt("Esta compra es individual o en pareja?")
-if (pregunta == "En pareja" || pregunta == "en pareja") {
-    let persona1 = solicitarPrecio()
-    let persona2 = solicitarPrecio()
-    let dineroDisponible = suma(persona1, persona2)
-    alert("El total recaudado entre su amigo y usted es: $" + dineroDisponible)
-} else {
-    let solo = prompt("Cuanto dinero dispones?")
-    alert("Su total recaudado es de: $" + solo)
+let juego = solicitarJuego()
+while (juego == 0 || juego > 5) {
+    juego = solicitarJuego()
 }
-alert('Estos juegos tenemos disponibles\n' + "A way out: $" + AWayOut + "\nAsassins Creed Unity: $" + asassinsCreedUnity + "\nAsassins creed Valhalla: $" + asassinCreedValhalla + "\nBattlefield5: $" + battlefield5);
 
-let comprar = prompt("Cuanto era su dinero recaudado?")
-if (comprar < AWayOut) {
-    alert("Lo siento, no te alcanza para obtener ningun juego")
-} else if (comprar>=battlefield5) {
-    alert("te alcanza solo para:\nA way out\nAssasins creed unity\nBattlefield5")
-} else if (comprar>=asassinCreedValhalla) {
-    alert("te alcanza para: \nA way out\nAssasins creed unity\nAssasins creed valhalla\nBattlefield5")
-} else {
-    alert("Puedes elegir el juego que quieras!!")
+alert("El subtotal de su juego es de $" + listaPrecios[juego - 1].precio + "\nEl total con iva seria de $" + suma(listaPrecios[juego - 1].precio, sumaIva(listaPrecios[juego - 1].precio)));
+
+
+let saldoSolicitado = solicitarSaldo() 
+
+if(saldoSolicitado<AWayOut){
+    alert("Lo siento"+" "+usuario+", pero en este momento no te alcanza para ningun juego!!!")
+}else if(saldoSolicitado<asassinCreedValhalla){
+    alert(usuario+" "+"En este momento te alcanza para:\n A way out\nAssasins creed Unity\n Battlefield5 ")
+}else{
+    alert(usuario+" "+"Felicidades, te alcanza para todos los juegos")
 }
