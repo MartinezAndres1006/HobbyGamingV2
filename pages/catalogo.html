@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link rel="shortcut icon" href="../assets/images/logo/Logo.ico.ico" type="image/x-icon">
     <title>HobbyGaming|Catalogo</title>
+    <script src="../js/index.js"></script>
 </head>
 
 <body class="cuerpo">
@@ -48,145 +49,38 @@
                             </ul>
                         </div>
                     </div>
+                    <div class="d-flex">
+                        <input type="text" placeholder="Buscar producto" id="inputBuscar">
+                        <button class="btn btn-dark" id="filtrar" >Filtrar</button>
+                    </div>
                 </nav>
             </div>
         </div>
     </header>
+    
     <main class="container-fluid2">
-        <section class="row fila">
-            <div class="card col-md-3 articulo" style="width: 18rem;">
-                <img src="../assets/images/catalogo ps4/a-way-out-247x309.jpg" class="" alt="A way out">
-                <div class="card-body">
-                    <h5 class="card-title">A Way Out</h5>
-                    <b>
-                        <p class="card-text">$2000</p>
-                    </b>
-                    <a href="#" class="btn addToCart btn-dark" id="1">Comprar </a>
+        <h1 class="centrar__catalogo ">Catalogo de videojuegos!</h1>
+        <section id="mostrarProductos">
+            <div id="mostrarTodoProductos" class="jueguitos">
+
+            </div>
+            
+        </section>
+        <section id="productosCarrito">
+            <h2 class="subtitulo">Carrito de compras</h2>
+            <div class="mostrarCarrito">
+                <div id="listaCarrito">
+                    <h3 class="parrafo">Detalle de compra</h3>
+                    <div class="div">
+
+                    </div>
                 </div>
             </div>
 
-            <div class="card col-md-3 articulo" style="width: 18rem;">
-                <img src="../assets/images/catalogo ps4/assassins-creed-unity-247x309.jpg" class=""
-                    alt="Assassins creed unity">
-                <div class="card-body">
-                    <h5 class="card-title">Assasins creed unity</h5>
-                    <b>
-                        <p class="card-text">$3500</p>
-                    </b>
-                    <a href="#" class="btn addToCart btn-dark" id="2">Comprar </a>
-                </div>
-            </div>
-
-            <div class="card col-md-3 articulo" style="width: 18rem;">
-                <img src="../assets/images/catalogo ps4/Assassins-Creed-Valhalla-247x309.jpg" class=""
-                    alt="Assassins creed valhalla">
-                <div class="card-body">
-                    <h5 class="card-title">Assasins creed Valhalla</h5>
-                    <b>
-                        <p class="card-text">$5500</p>
-                    </b>
-                    <a class="btn addToCart btn-dark" id="3">Comprar </a>
-                </div>
-            </div>
-
-            <div class="card col-md-3 articulo" style="width: 18rem;">
-                <img src="../assets/images/catalogo ps4/battlefield-5-201811201110172_1-247x309.jpg" class=""
-                    alt="battlefield-5-201811201110172_1-247x309">
-                <div class="card-body">
-                    <h5 class="card-title">Battlefield 5</h5>
-                    <b>
-                        <p class="precio">$3500</p>
-                    </b>
-                    <a href="#" class="btn addToCart btn-dark" id="4">Comprar </a>
-                </div>
-            </div>
-            <div class="card col-md-3 articulo" style="width: 18rem;">
-                <img src="../assets/images/catalogo ps4/Call-of-Duty-Black-Ops-Cold-War-247x309.jpg" class=""
-                    alt="Call of duty cold war">
-                <div class="card-body">
-                    <h5 class="card-title">Call Of Duty Cold War</h5>
-                    <b>
-                        <p class="precio">$7500</p>
-                    </b>
-                    <a href="#" class="btn addToCart btn-dark" id="5">Comprar </a>
-                </div>
-            </div>
-            <div class="card col-md-3 articulo" style="width: 18rem;">
-                <img src="../assets/images/catalogo ps4/call-of-duty-ww2-247x309.jpg" class=""
-                    alt="Call Of Duty World War II">
-                <div class="card-body">
-                    <h5 class="card-title">Call Of Duty World War II</h5>
-                    <b>
-                        <p class="precio">$4800</p>
-                    </b>
-                    <a href="#" class="btn addToCart btn-dark" id="6">Comprar </a>
-                </div>
-            </div>
-            <div class="card col-md-3 articulo" style="width: 18rem;">
-                <img src="../assets/images/catalogo ps4/Cyberpunk-2077-247x309.jpg" class="" alt="Cyberpunk 2077">
-                <div class="card-body">
-                    <h5 class="card-title">Cyberpunk 2077</h5>
-                    <b>
-                        <p class="precio">$2000</p>
-                    </b>
-                    <a href="#" class="btn addToCart btn-dark" id="7">Comprar </a>
-                </div>
-            </div>
-            <div class="card col-md-3 articulo" style="width: 18rem;">
-                <img src="../assets/images/catalogo ps4/Dirt-5-247x309.jpg" class="" alt="Dirt 5">
-                <div class="card-body">
-                    <h5 class="card-title">Dirt 5</h5>
-                    <b>
-                        <p class="precio">$4000</p>
-                    </b>
-                    <a href="#" class="btn addToCart btn-dark" id="8">Comprar </a>
-                </div>
-            </div>
-            <div class="card col-md-3 articulo" style="width: 18rem;">
-                <img src="../assets/images/catalogo ps4/dying-light-247x309.jpg" class="" alt="Dying light">
-                <div class="card-body">
-                    <h5 class="card-title">Dying Light</h5>
-                    <b>
-                        <p class="precio">$5000</p>
-                    </b>
-                    <a href="#" class="btn addToCart btn-dark" id="9">Comprar </a>
-                </div>
-            </div>
-            <div class="card col-md-3 articulo" style="width: 18rem;">
-                <img src="../assets/images/catalogo ps4/elden-ring-247x309.jpg" class="" alt="Elden Ring">
-                <div class="card-body">
-                    <h5 class="card-title">Elden Ring</h5>
-                    <b>
-                        <p class="precio">$7500</p>
-                    </b>
-                    <a href="#" class="btn addToCart btn-dark" id="10">Comprar </a>
-                </div>
-            </div>
-            <div class="card col-md-3 articulo" style="width: 18rem;">
-                <img src="../assets/images/catalogo ps4/Far cry 6.jpeg" class="" alt="Far Cry 6">
-                <div class="card-body">
-                    <h5 class="card-title">Far Cry 6</h5>
-                    <b>
-                        <p class="precio">$7000</p>
-                    </b>
-                    <a href="#" class="btn addToCart btn-dark" id="11">Comprar </a>
-                </div>
-            </div>
-            <div class="card col-md-3 articulo" style="width: 18rem;">
-                <img src="../assets/images/catalogo ps4/fifa-22-1-247x309.jpg" class="" alt="Fifa 22">
-                <div class="card-body">
-                    <h5 class="card-title">Fifa 22</h5>
-                    <b>
-                        <p class="precio">$3000</p>
-                    </b>
-                    <a href="#" class="btn addToCart btn-dark" id="12">Comprar</a>
-                </div>
-            </div>
-
-
-            </div>
         </section>
     </main>
+    
+    
     <div class="container-fluid piesito">
 
         <footer class="bg-dark text-center text-white">
@@ -222,10 +116,9 @@
         </footer>
 
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
-    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <script src="../js/catalogo.js"></script>
+    <script src="../js/interacciones.js"></script>
 </body>
 
 </html>
