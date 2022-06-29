@@ -71,25 +71,30 @@ function mostrarCarrito(){
         let botonEliminar= document.createElement("button")
         botonEliminar.innerText=("X")
         botonEliminar.setAttribute("class","btn btn-dark eliminar")
-        targeta.append(img,nombre,precio,botonEliminar)}
-        )}
+        targeta.append(img,nombre,precio,botonEliminar)
+        
+        
+    })
+    
+}
 
-let eliminarIte =document.getElementsByClassName("eliminar")
+
+let eliminarItem =document.getElementsByClassName("eliminar")
 
 
-const total = carrito.map((item)=>item.precio)
-// .reduce((precioTotalCarrito,precioProducto)=>precioTotalCarrito+precioProducto,0) 
+const total = carrito.map((producto)=>producto.precio).reduce((precioTotalCarrito,precioProducto)=>precioTotalCarrito+precioProducto,0) 
 
 console.log(total)
 
 let totalCompra= document.createElement("h4")
+totalCompra.setAttribute("class","parrafo")
 totalCompra.innerText=("Total: "+total)
 verCarrito.append(totalCompra)
 
 
 let borrarCarrito= document.createElement("button")
 borrarCarrito.innerText=("Vaciar Carrito")
-borrarCarrito.setAttribute("class","btn btn-dark")
+borrarCarrito.setAttribute("class","btn btn-dark vaciarCarrito")
 verCarrito.append(borrarCarrito)
 
 borrarCarrito.onclick= ()=>{

@@ -120,6 +120,9 @@
   font-size: 50px;
   text-shadow: 0 0 15px #0000;
 }
+.vaciarCarrito{
+  margin: 10px;
+}
 
 @media screen and (max-width: 768px) {
   .parrafo {
