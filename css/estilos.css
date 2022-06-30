@@ -206,6 +206,9 @@
   color: white;
   box-shadow: #5d18dc 0px 0px 0px 0px;
 }
+#contenedor__inicio{
+  text-align: center;
+}
 
 @media screen and (max-width: 768px) {
   .cabecera,
