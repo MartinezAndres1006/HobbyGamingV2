@@ -1,7 +1,7 @@
 const IVA = 21;
 const sumaIva = (x) => (x * 21) / 100;
 const suma = (a, b) => a + b;
-
+                                  //  Hago un llamado a los contenedores del html
 let mostrarProductos = document.getElementById("mostrarProductos");
 let mostrarTodoProductos = document.getElementById("mostrarTodoProductos");
 const div = document.querySelector(".div");
@@ -11,7 +11,7 @@ let precioTotal = document.getElementById("precioTotal");
 let carrito = [];
 
 
-
+                        // Hago la funcion para agregarlo al html
 function listado() {
   listaPrecios.forEach((producto) => {
     let targeta = document.createElement("div");
@@ -61,7 +61,7 @@ if (!carrito.length) {
   avisoCarrito.innerText = "El carrito esta vacio";
 }
 avisoCarrito.setAttribute("class", "subtitulo");
-
+                                                // Aca muestro para añadir los productos al carrito 
 function mostrarCarrito() {
   avisoCarrito.remove();
   listaCarrito.innerHTML = "";
@@ -86,7 +86,7 @@ function mostrarCarrito() {
     };
   });
 }
-
+                                                          // Aca creo un boton para vaciar carrito y limpiar el localStorage
 let borrarCarrito = document.createElement("button");
 borrarCarrito.innerText = "Vaciar Carrito";
 borrarCarrito.setAttribute("class", "btn btn-dark vaciarCarrito");
