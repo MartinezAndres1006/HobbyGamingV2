@@ -6,10 +6,13 @@ let mostrarProductos= document.getElementById("mostrarProductos")
 let mostrarTodoProductos= document.getElementById("mostrarTodoProductos")
 const div = document.querySelector(".div")
 
+let precioTotal=document.getElementById("precioTotal")
+
 let carrito=[]
 
 function listado(){
     listaPrecios.forEach((producto)=>{
+
         let targeta= document.createElement("div")
         mostrarTodoProductos.append(targeta)
         targeta.setAttribute("class","card col-md-3 articulo")
@@ -26,6 +29,10 @@ function listado(){
     
         botonDeCompra.onclick=() => {
             carrito.push(producto)
+            let subtotal=carrito.reduce((total, producto) => total + producto.precio, 0);
+            precioTotal.innerText=("Subtotal: $"+subtotal+"\nTotal: $"+suma(subtotal,sumaIva(subtotal)))
+
+
         alert("Has añadido "+ producto.nombre+" Al carrito\n"+" te cuesta $"+producto.precio+"\nY con iva te sale en: $"+suma(producto.precio,sumaIva(producto.precio)))
 
         mostrarCarrito()
@@ -57,6 +64,7 @@ avisoCarrito.setAttribute("class","subtitulo")
 
 function mostrarCarrito(){
     avisoCarrito.remove()
+    listaCarrito.innerHTML =''
     carrito.forEach((producto)=>{
         let targeta= document.createElement("div")
         targeta.setAttribute("id","productosCarrito")
@@ -69,27 +77,24 @@ function mostrarCarrito(){
         let precio=document.createElement("h4")
         precio.innerText=("$"+producto.precio)
         let botonEliminar= document.createElement("button")
-        botonEliminar.innerText=("X")
+        botonEliminar.innerText=("Has añadido este producto")
         botonEliminar.setAttribute("class","btn btn-dark eliminar")
         targeta.append(img,nombre,precio,botonEliminar)
         
-        
+        botonEliminar.onclick=() => {
+            alert('El titulo '+producto.nombre+" esta en el carrito!")
+
+        }
+
     })
     
 }
 
 
-let eliminarItem =document.getElementsByClassName("eliminar")
 
 
-const total = carrito.map((producto)=>producto.precio).reduce((precioTotalCarrito,precioProducto)=>precioTotalCarrito+precioProducto,0) 
 
-console.log(total)
 
-let totalCompra= document.createElement("h4")
-totalCompra.setAttribute("class","parrafo")
-totalCompra.innerText=("Total: "+total)
-verCarrito.append(totalCompra)
 
 
 let borrarCarrito= document.createElement("button")
@@ -100,4 +105,5 @@ verCarrito.append(borrarCarrito)
 borrarCarrito.onclick= ()=>{
     carrito=[]
     listaCarrito.innerHTML=""
+    precioTotal.innerText="Total: $0"
 }
