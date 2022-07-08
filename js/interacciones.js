@@ -11,11 +11,15 @@ let precioTotal = document.getElementById("precioTotal");
 let verCarrito = document.getElementById("productosCarrito");
 let enElCarro = document.getElementById("enElCarro");
 
-let carrito=[]
-let storage=JSON.parse(localStorage.getItem("Carrito"))
+let carrito = []
+let storage = JSON.parse(localStorage.getItem("Carrito"))
 
-
-storage ? (carrito=storage,mostrarCarrito()) : carrito=[]
+const EliminarDelCarrito=(prodId)=>{
+  const item= carrito.find((prod)=prod===prodId)
+  const indice= carrito.indexOf(item)
+  carrito.splice(indice,1)
+}
+storage ? (carrito = storage, mostrarCarrito()) : carrito = []
 
 // Hago la funcion para agregarlo al html
 function listado() {
@@ -43,10 +47,17 @@ function listado() {
       );
 
 
-       precioTotal.innerText = "Subtotal: $" + subtotal + "\nTotal: $" + suma(subtotal, sumaIva(subtotal));
+      precioTotal.innerText = "Subtotal: $" + subtotal + "\nTotal: $" + suma(subtotal, sumaIva(subtotal));
 
-      alert("Has añadido " + producto.nombre + " Al carrito\n" + " te cuesta $" + producto.precio + "\nY con iva te sale en: $" + suma(producto.precio, sumaIva(producto.precio)));
-      mostrarCarrito();
+
+      Swal.fire({
+        icon: 'success',
+        title: 'Excelente',
+        text: 'Has añadido ' + producto.nombre + ' Al carrito\n' + ' te cuesta $' + producto.precio + '\nY con iva te sale en: $' + suma(producto.precio, sumaIva(producto.precio)),
+        confirmButtonText: 'Vale!',
+        confirmButtonColor: '#ff8836'
+      })
+        mostrarCarrito();
     };
   });
 }
@@ -68,12 +79,19 @@ function mostrarCarrito() {
     let precio = document.createElement("h4");
     precio.innerText = "$" + producto.precio;
     let botonConfirmar = document.createElement("button");
-    botonConfirmar.innerText = "Has añadido este producto";
-    botonConfirmar.setAttribute("class", "btn btn-dark eliminar");
-    targeta.append(img, nombre, precio, botonConfirmar);
+    botonConfirmar.innerText = "En el carrito!";
+    botonConfirmar.setAttribute("class","btn btn-dark")
+    targeta.append(img, nombre, precio,  botonConfirmar);
 
-    botonConfirmar.onclick = () => {
-      alert("El titulo " + producto.nombre + " esta en el carrito!");
+     botonConfirmar.onclick = () => {
+      Swal.fire({
+        position: 'top',
+        icon: 'success',
+        title: 'Has seleccionado '+producto.nombre,
+        showConfirmButton: false,
+        timer: 1500
+      })
+    
     };
   });
 }
@@ -89,5 +107,5 @@ borrarCarrito.onclick = () => {
   localStorage.clear()
   listaCarrito.innerHTML = "";
   precioTotal.innerText = "Total: $0";
-  
+
 };
