@@ -1,0 +1,12 @@
+{
+    "Nombre":"Andres",
+    "Apellido":"Martinez",
+    "Edad":19,
+    "comprador":[
+        {
+            "Nombre":"Jose",
+            "Apellido":"Martinez",
+            "Edad":25
+        }
+    ]
+}
