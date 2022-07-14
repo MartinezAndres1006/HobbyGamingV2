@@ -17,28 +17,6 @@ let storage = JSON.parse(localStorage.getItem("Carrito"))
 storage ? (carrito = storage, mostrarCarrito()) : carrito = []
 
 
-
-document.addEventListener("click", (e) => {
-  if(e.target && e.target.matches("button#agregar")){
-      e.preventDefault();
-      carrito.push(producto);
-  localStorage.setItem("Carrito", JSON.stringify(carrito))
-  let subtotal = carrito.reduce((total, producto) => total + producto.precio, 0);
-
-
-  precioTotal.innerText = "Subtotal: $" + subtotal + "\nTotal: $" + suma(subtotal, sumaIva(subtotal));
-
-  Swal.fire({
-    icon: 'success',
-    title: 'Excelente',
-    text: 'Has añadido ' + producto.nombre + ' Al carrito\n' + ' te cuesta $' + producto.precio + '\nY con iva te sale en: $' + suma(producto.precio, sumaIva(producto.precio)),
-    confirmButtonText: 'Vale!',
-    confirmButtonColor: '#ff8836'
-  })
-  }
-  mostrarCarrito();
-  
-})
 // Hago la funcion para agregarlo al html
 function listado() {
   fetch('../json/data.json')
@@ -87,9 +65,6 @@ function listado() {
 
 
 listado();
-const eliminarProd = (id) => {
-  carrito = carrito.filter(value => value.id != id);
-}
 
 // Aca muestro para añadir los productos al carrito 
 function mostrarCarrito() {
