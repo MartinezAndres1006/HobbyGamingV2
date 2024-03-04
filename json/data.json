@@ -2,20 +2,20 @@
     {
       "ID": 1,
       "nombre": "A way Out",
-      "precio": 2000,
+      "precio": 100,
       "img":"../assets/images/catalogo ps4/a-way-out-247x309.jpg"
       
     },
     {
       "ID": 2,
       "nombre": "Asassins Creed Unity",
-      "precio": 3500,
+      "precio": 350,
       "img":"../assets/images/catalogo ps4/assassins-creed-unity-247x309.jpg"
     },
     {
       "ID": 3,
       "nombre": "Asassins Creed Valhalla",
-      "precio": 5500,
+      "precio": 55,
       "img":"../assets/images/catalogo ps4/Assassins-Creed-Valhalla-247x309.jpg"
     },
     {
