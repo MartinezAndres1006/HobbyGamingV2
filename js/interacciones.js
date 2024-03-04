@@ -5,7 +5,7 @@ if (storage) {
    carrito = storage;
   mostrarCarrito();
 } else {
-  carrito
+  carrito;
 }
 
 listado();

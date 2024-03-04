@@ -17,30 +17,34 @@ async function listado() {
         tarjeta.innerHTML = `
           <img src="${producto.img}">
           <h3>${producto.nombre}</h3>
-          <p>$${producto.precio}</p>
+          <p class="product-price">$${producto.precio}</p>
           <button class="btn-shop bx bx-shopping-bag"></button>
         `;
   
-        const botonDeCompra = tarjeta.querySelector("button");
-        botonDeCompra.addEventListener("click", () => {
-          carrito.push(producto);
-          localStorage.setItem("Carrito", JSON.stringify(carrito));
-          
-          const subtotal = carrito.reduce((total, producto) => total + producto.precio, 0);
-          const totalConIva = suma(subtotal, sumaIva(subtotal));
-  
-          precioTotal.innerText = `Subtotal: $${subtotal}\nTotal: $${totalConIva}`;
-  
-          Swal.fire({
+        const botonDeCompra = tarjeta.getElementsByClassName("btn-shop");
+
+for (let i = 0; i < botonDeCompra.length; i++) {
+    botonDeCompra[i].onclick = function() {
+        carrito.push(producto);
+        localStorage.setItem("Carrito", JSON.stringify(carrito));
+
+        const subtotal = carrito.reduce((total, producto) => total + producto.precio, 0);
+        const totalConIva = suma(subtotal, sumaIva(subtotal));
+
+        precioTotal.innerText = `Subtotal: $${subtotal}\nTotal: $${totalConIva}`;
+
+        Swal.fire({
             icon: 'success',
             title: 'Excelente',
             text: `Has añadido ${producto.nombre} al carrito\nTe cuesta $${producto.precio}\nCon IVA: $${suma(producto.precio, sumaIva(producto.precio))}`,
             confirmButtonText: 'Vale!',
             confirmButtonColor: '#ff8836'
-          });
-  
-          mostrarCarrito();
         });
+
+        mostrarCarrito();
+    };
+}
+
       });
 
     } catch (error) {

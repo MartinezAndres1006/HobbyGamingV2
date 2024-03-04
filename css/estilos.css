@@ -133,6 +133,12 @@ border-radius: 2px;
 
 }
 
+.btn-shop:hover{
+background-color: #fff;
+color: #000;
+
+}
+
 
 
 .piesito img {
